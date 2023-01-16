@@ -1,16 +1,3 @@
-# aplicativo
+# Aplicativo
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Este é o meu aplicativo para dispositivos móveis desenvolvido com a linguagem Dart e o framework Flutter. Utilizando Widgets, oferece uma interface de usuário intuitiva e escalável, que se adapta bem a diferentes plataformas. O objetivo deste aplicativo é ajudar os usuários a organizar seus gastos diários e educá-los sobre o financiamento pessoal, proporcionando uma maneira simples e intuitiva de acompanhar e controlar os gastos diários. Além disso, este aplicativo também oferece uma educação financeira básica, focando na simplicidade e na organização dos gastos.
