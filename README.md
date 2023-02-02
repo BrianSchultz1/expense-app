@@ -5,8 +5,8 @@ Este é um aplicativo de controle de gastos para dispositivos móveis, desenvolv
 
 Status:
 
-Em desenvolvimento
-
+    Em desenvolvimento
+    
 Tecnologias Utilizadas:
 
     Dart
