@@ -1,5 +1,18 @@
-<h1>Expense - Controle de Gastos & Minicurso</h1>
+Expense - Controle de Gastos & Minicurso
+Introdução
 
-> Status: Developing
+Este é um aplicativo de controle de gastos para dispositivos móveis, desenvolvido com Dart e Flutter. Com uma interface fácil de usar, o objetivo é ajudar os usuários a manter um registro dos seus gastos diários e a aprender sobre finanças pessoais de forma simples.
+Status
 
-Este é o código do meu aplicativo para dispositivos móveis desenvolvido com a linguagem Dart e o framework Flutter. Utilizando Widgets, oferece uma interface de usuário intuitiva e escalável, que se adapta bem a diferentes plataformas. O objetivo deste aplicativo é ajudar os usuários a organizar seus gastos diários e educá-los sobre o financiamento pessoal, proporcionando uma maneira simples e intuitiva de acompanhar e controlar os gastos diários. Além disso, este aplicativo também oferece uma educação financeira básica, focando na simplicidade e na organização dos gastos.
+Em desenvolvimento
+Tecnologias Utilizadas
+
+    Dart
+    Flutter
+    Widgets
+
+Recursos
+
+    Controle de gastos diários
+    Introdução à educação financeira
+    Interface fácil de usar e escalável
