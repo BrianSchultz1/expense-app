@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:aplicativo/main.dart';
+import 'package:aplicativo/pages/home_page.dart';
 import 'package:aplicativo/pages/settings_page.dart';
 import 'package:aplicativo/pages/short_course.dart';
 import 'package:flutter/material.dart';
@@ -29,12 +29,12 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
     _pages = [
       ScreenHiddenDrawer(
         ItemHiddenMenu(
-          name: 'H O M E P A G E',
+          name: 'E X P E N S E',
           baseStyle: myTextStyle,
           selectedStyle: myTextStyle,
           colorLineSelected: Color.fromRGBO(14, 48, 36, 1),
         ),
-        const MyhomePage(),
+        MyhomePage(),
       ),
       ScreenHiddenDrawer(
         ItemHiddenMenu(
@@ -59,12 +59,14 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
 
   @override
   Widget build(BuildContext context) {
-    return HiddenDrawerMenu(
-      backgroundColorMenu: const Color.fromRGBO(47, 117, 92, 1),
-      screens: _pages,
-      initPositionSelected: 0,
-      slidePercent: 55,
-      contentCornerRadius: 25,
+    return Drawer(
+      child: HiddenDrawerMenu(
+        backgroundColorMenu: const Color.fromRGBO(47, 117, 92, 1),
+        screens: _pages,
+        initPositionSelected: 0,
+        slidePercent: 55,
+        contentCornerRadius: 25,
+      ),
     );
   }
 }

@@ -14,6 +14,7 @@ class AdaptativeTextField extends StatelessWidget {
     this.keyboardType = TextInputType.text,
     this.onSubmitted,
     Key? key,
+    required TextStyle labelStyle,
   }) : super(key: key);
 
   @override

@@ -47,17 +47,6 @@ class TransactionList extends StatelessWidget {
                 child: ListTile(
                   leading: const CircleAvatar(
                     backgroundColor: Color.fromRGBO(42, 147, 110, 1),
-                    child: Padding(
-                      padding: EdgeInsets.all(6),
-                      child: FittedBox(
-                          // child: Text(
-                          //   'R\$${tr.value}',
-                          //   style: const TextStyle(
-                          //     color: Colors.white,
-                          //   ),
-                          // ),
-                          ),
-                    ),
                   ),
                   title: Text(
                     tr.title,
@@ -73,24 +62,79 @@ class TransactionList extends StatelessWidget {
                     style: const TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 16,
-                      // fontWeight: FontWeight.bold,
                       color: Colors.black,
                     ),
                   ),
                   trailing: MediaQuery.of(context).size.width > 480
-                      ? TextButton.icon(
-                          onPressed: () => onRemove(tr.id),
-                          icon: const Icon(Icons.delete),
-                          label: const Text('Excluir'),
-                          style: ButtonStyle(
-                            foregroundColor: MaterialStateProperty.all<Color>(
-                                Theme.of(context).errorColor),
+                      ? ButtonTheme.fromButtonThemeData(
+                          data: const ButtonThemeData(
+                            layoutBehavior: ButtonBarLayoutBehavior.constrained,
+                            padding: EdgeInsets.all(0),
+                          ),
+                          child: TextButton.icon(
+                            label: const SizedBox(),
+                            onPressed: () {
+                              showDialog(
+                                context: context,
+                                builder: (ctx) => AlertDialog(
+                                  title: const Text('Aviso!'),
+                                  content: const Text(
+                                      'Esta operação não pode ser desfeita!'),
+                                  actions: <Widget>[
+                                    TextButton(
+                                      child: const Text('OK'),
+                                      onPressed: () {
+                                        onRemove(tr.id);
+                                        Navigator.of(ctx).pop();
+                                      },
+                                    )
+                                  ],
+                                ),
+                              );
+                            },
+                            icon: const Icon(Icons.delete),
+                            // label: const Text('Excluir'),
+                            style: ButtonStyle(
+                              foregroundColor: MaterialStateProperty.all<Color>(
+                                  Theme.of(context).errorColor),
+                            ),
                           ),
                         )
-                      : IconButton(
-                          icon: const Icon(Icons.delete),
-                          color: Theme.of(context).errorColor,
-                          onPressed: () => onRemove(tr.id),
+                      : Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              'R\$${tr.value}',
+                              style: const TextStyle(
+                                fontFamily: 'Poppins',
+                                fontSize: 15,
+                                color: Colors.black,
+                              ),
+                            ),
+                            IconButton(
+                              icon: const Icon(Icons.delete),
+                              color: Theme.of(context).errorColor,
+                              onPressed: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (ctx) => AlertDialog(
+                                    title: const Text('Aviso!'),
+                                    content: const Text(
+                                        'Esta operação não pode ser desfeita!'),
+                                    actions: <Widget>[
+                                      TextButton(
+                                        child: const Text('OK'),
+                                        onPressed: () {
+                                          onRemove(tr.id);
+                                          Navigator.of(ctx).pop();
+                                        },
+                                      )
+                                    ],
+                                  ),
+                                );
+                              },
+                            ),
+                          ],
                         ),
                 ),
               );

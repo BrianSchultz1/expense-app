@@ -42,10 +42,18 @@ class Chart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 0,
       margin: const EdgeInsets.all(20),
       child: Container(
-        color: const Color.fromRGBO(207, 207, 207, 1),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: const Color.fromRGBO(207, 207, 207, 1),
+          boxShadow: const [
+            BoxShadow(
+              color: Colors.black12,
+              blurRadius: 30,
+            ),
+          ],
+        ),
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: Row(
