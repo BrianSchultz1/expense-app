@@ -1,6 +1,9 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'adaptative_buttom.dart';
+import 'package:http/http.dart' as http;
 import 'adaptative_text_fild.dart';
 import 'adaptative_date_picker.dart';
 
@@ -14,19 +17,30 @@ class TransactionForm extends StatefulWidget {
 }
 
 class _TransactionFormState extends State<TransactionForm> {
-  final _baseUrl = 'https://expense-15c96-default-rtdb.firebaseio.com';
+  final _baseUrl = 'https://expense-15c96-default-rtdb.firebaseio.com/';
 
   final _titleController = TextEditingController();
   final _valueController = TextEditingController();
   DateTime? _selectedDate = DateTime.now();
 
-  _submitForm() {
-    final title = _titleController.text;
-    final value = double.tryParse(_valueController.text) ?? 0;
-
-    if (title.isEmpty || value <= 0 || _selectedDate == null) {
+  Future _submitForm() async {
+    if (_titleController.text.isEmpty ||
+        double.tryParse(_valueController.text) == null ||
+        _selectedDate == null) {
       return;
     }
+
+    final response = await http.post(
+      Uri.parse('$_baseUrl/expense.json'),
+      body: jsonEncode({
+        "name": _titleController.text,
+        'value': double.parse(_valueController.text),
+        'date': DateFormat('yyyy-MM-dd').format(_selectedDate!)
+      }),
+    );
+
+    final title = _titleController.text;
+    final value = double.parse(_valueController.text);
 
     widget.onSubmit(title, value, _selectedDate!);
   }
@@ -60,7 +74,6 @@ class _TransactionFormState extends State<TransactionForm> {
                 onSubmitted: (_) => _submitForm(),
                 labelStyle: const TextStyle(),
               ),
-              // new component
               AdaptativeDatePicker(
                 selectedDate: _selectedDate,
                 onDateChanged: (newDate) {

@@ -44,6 +44,9 @@ dev_dependencies:
     sdk: flutter
   intl: 0.17.0
   http: 0.13.3
+  firebase_core: ^1.10.0
+  firebase_database: ^8.1.1
+ 
 
 
   # The "flutter_lints" package below contains a set of recommended lints to
