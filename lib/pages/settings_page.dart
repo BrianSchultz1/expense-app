@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +11,7 @@ class SettingsPage extends StatefulWidget {
 }
 
 class _SettingsPageState extends State<SettingsPage> {
+  // Criação de uma instância de FocusNode para remover o foco do teclado quando o usuário tocar em algum lugar fora dele.
   final FocusNode _unfocusNode = FocusNode();
 
   final myTextStyle = const TextStyle(
@@ -30,6 +30,7 @@ class _SettingsPageState extends State<SettingsPage> {
           Padding(
             padding: const EdgeInsets.fromLTRB(50, 100, 50, 0),
             child: GestureDetector(
+              // Quando o usuário tocar no container, o foco do teclado é removido.
               onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
               child: Align(
                 alignment: const AlignmentDirectional(0, 0),

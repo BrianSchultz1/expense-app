@@ -7,6 +7,7 @@ class AuthPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Retorna um Scaffold com um Stack como corpo
     return Scaffold(
       body: Stack(
         children: [

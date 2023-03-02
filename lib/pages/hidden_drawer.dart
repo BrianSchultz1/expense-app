@@ -9,6 +9,7 @@ import 'package:hidden_drawer_menu/hidden_drawer_menu.dart';
 class HiddenDrawer extends StatefulWidget {
   const HiddenDrawer({super.key});
 
+  // Criação do estado para a classe HiddenDrawer
   @override
   State<HiddenDrawer> createState() => _HiddenDrawerState();
 }

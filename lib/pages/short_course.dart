@@ -99,7 +99,7 @@ class _ShortCourseState extends State<ShortCourse> {
             onTap: () => _selectCategory(context),
           ),
           ListTile(
-            title: Text('Tópico XIV', style: myText),
+            title: const Text('Tópico XIV', style: myText),
             onTap: () => _selectCategory(context),
           ),
         ],
