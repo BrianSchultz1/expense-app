@@ -45,6 +45,14 @@ dev_dependencies:
   intl: 0.17.0
   http: 0.13.4
   firebase_core: ^1.12.0
+  flutter_launcher_icons: "^0.12.0"
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/image/Logo.png"
+  adaptative_icon_background: "#2A936E"
+  adaptative_icon_foreground: "assets/image/Logo.png"
  
 
 

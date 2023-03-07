@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'adaptative_buttom.dart';
 import 'package:http/http.dart' as http;
 import 'adaptative_text_fild.dart';
 import 'adaptative_date_picker.dart';
