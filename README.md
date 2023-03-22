@@ -5,7 +5,7 @@ Este é um aplicativo de controle de gastos para dispositivos móveis, desenvolv
 
 Status:
 
-    Em desenvolvimento
+Feito e no aguardo financeiramente para publicar na Play Store
     
 Tecnologias Utilizadas:
 
