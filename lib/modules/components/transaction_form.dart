@@ -29,15 +29,6 @@ class _TransactionFormState extends State<TransactionForm> {
       return;
     }
 
-    final response = await http.post(
-      Uri.parse('$_baseUrl/expense.json'),
-      body: jsonEncode({
-        "name": _titleController.text,
-        'value': double.parse(_valueController.text),
-        'date': DateFormat('yyyy-MM-dd').format(_selectedDate!)
-      }),
-    );
-
     final title = _titleController.text;
     final value = double.parse(_valueController.text);
 
