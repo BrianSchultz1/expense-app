@@ -8,13 +8,13 @@ class AppTheme {
           primary: const Color.fromRGBO(42, 147, 110, 1),
         ),
         textTheme: tema.textTheme.copyWith(
-          headline6: const TextStyle(
+          titleLarge: const TextStyle(
             fontFamily: 'Poppins',
             fontSize: 18,
             fontWeight: FontWeight.bold,
             color: Colors.black,
           ),
-          button: const TextStyle(
+          labelLarge: const TextStyle(
             color: Color.fromRGBO(42, 147, 110, 1),
             fontWeight: FontWeight.normal,
           ),

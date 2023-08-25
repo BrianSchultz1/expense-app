@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:aplicativo/pages/home_page.dart';
-import 'package:aplicativo/pages/settings_page.dart';
-import 'package:aplicativo/pages/short_course.dart';
+import 'package:aplicativo/modules/pages/home_page.dart';
+import 'package:aplicativo/modules/pages/settings_page.dart';
+import 'package:aplicativo/modules/pages/short_course.dart';
 import 'package:flutter/material.dart';
 import 'package:hidden_drawer_menu/hidden_drawer_menu.dart';
 
@@ -61,12 +61,18 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: HiddenDrawerMenu(
-        backgroundColorMenu: const Color.fromRGBO(47, 117, 92, 1),
-        screens: _pages,
-        initPositionSelected: 0,
-        slidePercent: 55,
-        contentCornerRadius: 25,
+      child: Theme(
+        data: Theme.of(context).copyWith(
+          iconTheme: IconThemeData(
+              color: Colors.black), // Defina a cor do ícone como preto
+        ),
+        child: HiddenDrawerMenu(
+          backgroundColorMenu: const Color.fromRGBO(47, 117, 92, 1),
+          screens: _pages,
+          initPositionSelected: 0,
+          slidePercent: 55,
+          contentCornerRadius: 25,
+        ),
       ),
     );
   }

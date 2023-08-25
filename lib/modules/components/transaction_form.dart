@@ -29,6 +29,15 @@ class _TransactionFormState extends State<TransactionForm> {
       return;
     }
 
+    final response = await http.post(
+      Uri.parse('$_baseUrl/expense.json'),
+      body: jsonEncode({
+        "name": _titleController.text,
+        'value': double.parse(_valueController.text),
+        'date': DateFormat('yyyy-MM-dd').format(_selectedDate!)
+      }),
+    );
+
     final title = _titleController.text;
     final value = double.parse(_valueController.text);
 
@@ -49,20 +58,34 @@ class _TransactionFormState extends State<TransactionForm> {
           ),
           child: Column(
             children: [
-              AdaptativeTextField(
-                controller: _titleController,
-                onSubmitted: (_) => _submitForm(),
-                label: 'Nome',
-                labelStyle: const TextStyle(),
+              Card(
+                color: Color.fromRGBO(6, 100, 67, 1),
+                elevation: 0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: AdaptativeTextField(
+                  controller: _titleController,
+                  onSubmitted: (_) => _submitForm(),
+                  label: 'Nome',
+                  labelStyle: const TextStyle(),
+                ),
               ),
               const SizedBox(height: 10),
-              AdaptativeTextField(
-                label: 'Valor (R\$)',
-                controller: _valueController,
-                keyboardType:
-                    const TextInputType.numberWithOptions(decimal: true),
-                onSubmitted: (_) => _submitForm(),
-                labelStyle: const TextStyle(),
+              Card(
+                color: Color.fromRGBO(6, 100, 67, 1),
+                elevation: 0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: AdaptativeTextField(
+                  label: 'Valor (R\$)',
+                  controller: _valueController,
+                  keyboardType:
+                      const TextInputType.numberWithOptions(decimal: true),
+                  onSubmitted: (_) => _submitForm(),
+                  labelStyle: const TextStyle(),
+                ),
               ),
               AdaptativeDatePicker(
                 selectedDate: _selectedDate,
@@ -81,9 +104,13 @@ class _TransactionFormState extends State<TransactionForm> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                       backgroundColor: const Color.fromRGBO(6, 100, 67, 1),
+                      elevation: 0,
                     ),
                     onPressed: _submitForm,
-                    child: const Text('Nova Despesa'),
+                    child: const Text(
+                      'Nova Despesa',
+                      style: TextStyle(color: Colors.grey),
+                    ),
                   ),
                 ],
               )

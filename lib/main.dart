@@ -1,5 +1,5 @@
-import 'package:aplicativo/theme/app_theme.dart';
-import 'package:aplicativo/pages/hidden_drawer.dart';
+import 'package:aplicativo/core/utils/theme/app_theme.dart';
+import 'package:aplicativo/modules/pages/hidden_drawer.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 

@@ -1,11 +1,11 @@
 import 'dart:io';
 import 'dart:math';
 
-import 'package:aplicativo/components/chart.dart';
-import 'package:aplicativo/components/transaction_form.dart';
-import 'package:aplicativo/components/transaction_list.dart';
-import 'package:aplicativo/models/transaction.dart';
-import 'package:aplicativo/pages/hidden_drawer.dart';
+import 'package:aplicativo/modules/components/chart.dart';
+import 'package:aplicativo/modules/components/transaction_form.dart';
+import 'package:aplicativo/modules/components/transaction_list.dart';
+import 'package:aplicativo/core/packages/models/transaction.dart';
+import 'package:aplicativo/modules/pages/hidden_drawer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -126,6 +126,7 @@ class _MyhomePageState extends State<MyhomePage> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         backgroundColor: const Color.fromRGBO(6, 100, 67, 1),
+                        elevation: 0.0,
                       ),
                       onPressed: () => _openTransactionFormModal(context),
                       child: const Text('Adicionar'),

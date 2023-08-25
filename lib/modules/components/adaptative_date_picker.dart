@@ -50,22 +50,26 @@ class AdaptativeDatePicker extends StatelessWidget {
                     selectedDate == null
                         ? 'Nenhuma data selecionada!'
                         : 'Data Selecionada: ${DateFormat('dd/MM/y').format(selectedDate!)}',
+                    style: TextStyle(color: Colors.white),
                   ),
                 ),
                 Column(
                   children: [
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          backgroundColor: const Color.fromRGBO(6, 100, 67, 1)),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        backgroundColor: const Color.fromRGBO(6, 100, 67, 1),
+                        elevation: 0,
+                      ),
                       onPressed: () => _showDatePicker(context),
                       child: const Text(
                         'Selecionar Data',
                         selectionColor: Color(
                           243,
                         ),
+                        textAlign: TextAlign.center,
                       ),
                     ),
                   ],
