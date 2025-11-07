@@ -45,7 +45,7 @@ class _SettingsPageState extends State<SettingsPage> {
                         child: Align(
                           alignment: const AlignmentDirectional(-0.3, -0.5),
                           child: Text(
-                              'Desenvolvedor:\nBrian Friedrich dos Santos Schultz\nCursando engenharia de Software\nInstagram de conteúdo: @fluttups\nNovas funcionalidades em breve',
+                              'Desenvolvedor:\nBrian Friedrich dos Santos Schultz\nAplicativo para projeto de pesquisa TCC\nCursando engenharia de Software',
                               textAlign: TextAlign.start,
                               maxLines: 10,
                               style: myTextStyle),

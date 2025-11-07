@@ -9,6 +9,9 @@ void main() async {
   runApp(
     DevicePreview(
       enabled: true,
+      tools: const [
+        ...DevicePreview.defaultTools,
+      ],
       builder: ((context) => ExpensesApp()),
     ),
   );
@@ -25,6 +28,8 @@ class ExpensesApp extends StatelessWidget {
       //   AppRoutes.AUTH: (context) => const AuthPage(),
       //   AppRoutes.HOME: (context) => const AuthPage(),
       // },
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
       home: const HiddenDrawer(),
       theme: AppTheme().getTheme,
