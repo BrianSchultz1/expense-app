@@ -95,8 +95,8 @@ class TransactionList extends StatelessWidget {
                             icon: const Icon(Icons.delete),
                             // label: const Text('Excluir'),
                             style: ButtonStyle(
-                              foregroundColor: MaterialStateProperty.all<Color>(
-                                  Theme.of(context).errorColor),
+                              foregroundColor: WidgetStateProperty.all<Color>(
+                                  Theme.of(context).disabledColor),
                             ),
                           ),
                         )
@@ -113,7 +113,7 @@ class TransactionList extends StatelessWidget {
                             ),
                             IconButton(
                               icon: const Icon(Icons.delete),
-                              color: Theme.of(context).errorColor,
+                              color: Theme.of(context).disabledColor,
                               onPressed: () {
                                 showDialog(
                                   context: context,

@@ -29,7 +29,7 @@ class _TransactionFormState extends State<TransactionForm> {
       return;
     }
 
-    final response = await http.post(
+    await http.post(
       Uri.parse('$_baseUrl/expense.json'),
       body: jsonEncode({
         "name": _titleController.text,
