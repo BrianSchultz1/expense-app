@@ -9,9 +9,6 @@ void main() async {
   runApp(
     DevicePreview(
       enabled: true,
-      tools: const [
-        ...DevicePreview.defaultTools,
-      ],
       builder: ((context) => ExpensesApp()),
     ),
   );
