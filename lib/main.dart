@@ -4,8 +4,6 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
-  // WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp(); // Inicialize o Firebase
   runApp(
     DevicePreview(
       enabled: true,
@@ -21,10 +19,6 @@ class ExpensesApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // routes: {
-      //   AppRoutes.AUTH: (context) => const AuthPage(),
-      //   AppRoutes.HOME: (context) => const AuthPage(),
-      // },
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,

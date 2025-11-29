@@ -7,6 +7,7 @@ import 'package:aplicativo/modules/components/transaction_list.dart';
 import 'package:aplicativo/core/packages/models/transaction.dart';
 import 'package:aplicativo/modules/pages/hidden_drawer.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class MyhomePage extends StatefulWidget {
@@ -62,13 +63,14 @@ class _MyhomePageState extends State<MyhomePage> {
     final mediaQuery = MediaQuery.of(context);
     bool isLandscape = mediaQuery.orientation == Orientation.landscape;
 
-    final iconlist = Platform.isIOS ? CupertinoIcons.refresh : Icons.list;
-    final charIconlist =
-        Platform.isIOS ? CupertinoIcons.refresh : Icons.show_chart;
+    // Verifica se é iOS de forma segura
+    bool isIOS = !kIsWeb && Platform.isIOS;
 
     final PreferredSizeWidget appBar = AppBar(
       toolbarHeight: 100,
       centerTitle: true,
+      backgroundColor: const Color.fromRGBO(47, 117, 92, 1),
+      elevation: 0,
       title: Column(
         children: const [],
       ),
@@ -98,7 +100,7 @@ class _MyhomePageState extends State<MyhomePage> {
       ),
     );
 
-    return Platform.isIOS
+    return isIOS
         ? CupertinoPageScaffold(
             navigationBar: CupertinoNavigationBar(
               middle: const Text(
@@ -115,7 +117,7 @@ class _MyhomePageState extends State<MyhomePage> {
             drawer: const HiddenDrawer(),
             appBar: null,
             body: bodyPage,
-            floatingActionButton: Platform.isIOS
+            floatingActionButton: isIOS
                 ? Container()
                 : SizedBox(
                     height: 32,

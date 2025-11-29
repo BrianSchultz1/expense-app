@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -30,7 +31,9 @@ class AdaptativeDatePicker extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Platform.isIOS
+    final isIOS = !kIsWeb && Platform.isIOS;
+
+    return isIOS
         ? Container(
             height: 180,
             child: CupertinoDatePicker(
@@ -66,9 +69,7 @@ class AdaptativeDatePicker extends StatelessWidget {
                       onPressed: () => _showDatePicker(context),
                       child: const Text(
                         'Selecionar Data',
-                        selectionColor: Color(
-                          243,
-                        ),
+                        selectionColor: Colors.white,
                         textAlign: TextAlign.center,
                       ),
                     ),

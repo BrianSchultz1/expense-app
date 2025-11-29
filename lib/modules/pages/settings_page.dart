@@ -21,7 +21,7 @@ class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color.fromRGBO(42, 147, 110, 1),
+      color: const Color.fromRGBO(47, 117, 92, 1),
       child: Column(
         children: [
           Padding(
@@ -45,7 +45,7 @@ class _SettingsPageState extends State<SettingsPage> {
                         child: Align(
                           alignment: const AlignmentDirectional(-0.3, -0.5),
                           child: Text(
-                              'Desenvolvedor:\nBrian Friedrich dos Santos Schultz\nAplicativo para projeto de pesquisa TCC\nCursando engenharia de Software',
+                              'Desenvolvedor:\nBrian Friedrich dos Santos Schultz\nAplicativo para projeto de pesquisa TCC\nCurso engenharia de Software',
                               textAlign: TextAlign.start,
                               maxLines: 10,
                               style: myTextStyle),

@@ -60,19 +60,16 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
 
   @override
   Widget build(BuildContext context) {
-    return Drawer(
-      child: Theme(
-        data: Theme.of(context).copyWith(
-          iconTheme: IconThemeData(
-              color: Colors.black), // Defina a cor do ícone como preto
-        ),
-        child: HiddenDrawerMenu(
-          backgroundColorMenu: const Color.fromRGBO(47, 117, 92, 1),
-          screens: _pages,
-          initPositionSelected: 0,
-          slidePercent: 55,
-          contentCornerRadius: 25,
-        ),
+    return Scaffold(
+      backgroundColor: const Color.fromRGBO(47, 117, 92, 1),
+      body: HiddenDrawerMenu(
+        backgroundColorMenu: const Color.fromRGBO(47, 117, 92, 1),
+        backgroundColorAppBar: const Color.fromRGBO(47, 117, 92, 1),
+        screens: _pages,
+        initPositionSelected: 0,
+        slidePercent: 65,
+        contentCornerRadius: 25,
+        disableAppBarDefault: false,
       ),
     );
   }
