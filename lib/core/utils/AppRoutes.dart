@@ -1,5 +1,5 @@
-// Classe que define as rotas da aplicação
+// Classe que define as rotas nomeadas da aplicação
 class AppRoutes {
-  static const AUTH = '/';
-  static const HOME = '/home';
+  static const String splash = '/';
+  static const String home = '/home';
 }

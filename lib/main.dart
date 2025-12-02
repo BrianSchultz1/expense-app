@@ -1,5 +1,7 @@
 import 'package:aplicativo/core/utils/theme/app_theme.dart';
+import 'package:aplicativo/core/utils/AppRoutes.dart';
 import 'package:aplicativo/modules/pages/hidden_drawer.dart';
+import 'package:aplicativo/modules/pages/splash_page.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +24,11 @@ class ExpensesApp extends StatelessWidget {
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
-      home: const HiddenDrawer(),
+      initialRoute: AppRoutes.splash,
+      routes: {
+        AppRoutes.splash: (context) => const SplashPage(),
+        AppRoutes.home: (context) => const HiddenDrawer(),
+      },
       theme: AppTheme().getTheme,
     );
   }

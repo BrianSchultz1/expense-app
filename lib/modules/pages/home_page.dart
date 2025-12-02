@@ -4,7 +4,7 @@ import 'dart:math';
 import 'package:aplicativo/modules/components/chart.dart';
 import 'package:aplicativo/modules/components/transaction_form.dart';
 import 'package:aplicativo/modules/components/transaction_list.dart';
-import 'package:aplicativo/core/packages/models/transaction.dart';
+import 'package:aplicativo/core/models/transaction.dart';
 import 'package:aplicativo/modules/pages/hidden_drawer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
