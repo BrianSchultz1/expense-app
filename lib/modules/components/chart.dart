@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:intl/intl.dart';
 import 'package:aplicativo/core/models/transaction.dart';
 import 'chart_bar.dart';

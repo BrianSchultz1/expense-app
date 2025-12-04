@@ -35,7 +35,7 @@ class AdaptativeDatePicker extends StatelessWidget {
     final isIOS = !kIsWeb && Platform.isIOS;
 
     return isIOS
-        ? Container(
+        ? SizedBox(
             height: 180,
             child: CupertinoDatePicker(
               mode: CupertinoDatePickerMode.date,

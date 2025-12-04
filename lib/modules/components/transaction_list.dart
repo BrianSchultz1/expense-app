@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:aplicativo/core/models/transaction.dart';
+// ignore: depend_on_referenced_packages
 import 'package:intl/intl.dart';
 
 class TransactionList extends StatelessWidget {
   final List<Transaction> transactions;
   final void Function(String) onRemove;
 
-  const TransactionList(this.transactions, this.onRemove, {Key? key})
-      : super(key: key);
+  const TransactionList(this.transactions, this.onRemove, {super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -11,9 +11,10 @@ import 'package:flutter/foundation.dart'
 import 'package:flutter/material.dart';
 
 class MyhomePage extends StatefulWidget {
-  const MyhomePage({Key? key}) : super(key: key);
+  const MyhomePage({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _MyhomePageState createState() => _MyhomePageState();
 }
 
