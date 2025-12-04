@@ -1,6 +1,6 @@
-import 'dart:io';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
+import 'package:flutter/foundation.dart'
+    show kIsWeb, defaultTargetPlatform, TargetPlatform;
 import 'package:flutter/material.dart';
 
 class AdaptativeTextField extends StatelessWidget {
@@ -16,14 +16,14 @@ class AdaptativeTextField extends StatelessWidget {
     this.controller,
     this.keyboardType = TextInputType.text,
     this.onSubmitted,
-    Key? key,
+    super.key,
     required this.labelStyle,
     this.textStyle,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
-    final isIOS = !kIsWeb && Platform.isIOS;
+    final isIOS = !kIsWeb && defaultTargetPlatform == TargetPlatform.iOS;
 
     return isIOS
         ? Padding(

@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'dart:math';
 
 import 'package:aplicativo/modules/components/chart.dart';
@@ -7,11 +6,13 @@ import 'package:aplicativo/modules/components/transaction_list.dart';
 import 'package:aplicativo/core/models/transaction.dart';
 import 'package:aplicativo/modules/pages/hidden_drawer.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
+import 'package:flutter/foundation.dart'
+    show kIsWeb, defaultTargetPlatform, TargetPlatform;
 import 'package:flutter/material.dart';
 
 class MyhomePage extends StatefulWidget {
-  MyhomePage({Key? key});
+  const MyhomePage({Key? key}) : super(key: key);
+
   @override
   _MyhomePageState createState() => _MyhomePageState();
 }
@@ -64,15 +65,15 @@ class _MyhomePageState extends State<MyhomePage> {
     bool isLandscape = mediaQuery.orientation == Orientation.landscape;
 
     // Verifica se é iOS de forma segura
-    bool isIOS = !kIsWeb && Platform.isIOS;
+    bool isIOS = !kIsWeb && defaultTargetPlatform == TargetPlatform.iOS;
 
     final PreferredSizeWidget appBar = AppBar(
       toolbarHeight: 100,
       centerTitle: true,
       backgroundColor: const Color.fromRGBO(47, 117, 92, 1),
       elevation: 0,
-      title: Column(
-        children: const [],
+      title: const Column(
+        children: [],
       ),
     );
 
@@ -102,8 +103,8 @@ class _MyhomePageState extends State<MyhomePage> {
 
     return isIOS
         ? CupertinoPageScaffold(
-            navigationBar: CupertinoNavigationBar(
-              middle: const Text(
+            navigationBar: const CupertinoNavigationBar(
+              middle: Text(
                 'Despesas Pessoais',
               ),
               trailing: Row(

@@ -47,55 +47,55 @@ class _ShortCourseState extends State<ShortCourse> {
                 textAlign: TextAlign.end, style: myText),
           ),
           ListTile(
-            title: Text('Tópico I', style: myText),
+            title: const Text('Tópico I', style: myText),
             onTap: () => _selectCategory(context),
           ),
           ListTile(
-            title: Text('Tópico II', style: myText),
+            title: const Text('Tópico II', style: myText),
             onTap: () => _selectCategory(context),
           ),
           ListTile(
-            title: Text('Tópico III', style: myText),
+            title: const Text('Tópico III', style: myText),
             onTap: () => _selectCategory(context),
           ),
           ListTile(
-            title: Text('Tópico IV', style: myText),
+            title: const Text('Tópico IV', style: myText),
             onTap: () => _selectCategory(context),
           ),
           ListTile(
-            title: Text('Tópico V', style: myText),
+            title: const Text('Tópico V', style: myText),
             onTap: () => _selectCategory(context),
           ),
           ListTile(
-            title: Text('Tópico VI', style: myText),
+            title: const Text('Tópico VI', style: myText),
             onTap: () => _selectCategory(context),
           ),
           ListTile(
-            title: Text('Tópico VII', style: myText),
+            title: const Text('Tópico VII', style: myText),
             onTap: () => _selectCategory(context),
           ),
           ListTile(
-            title: Text('Tópico VIII', style: myText),
+            title: const Text('Tópico VIII', style: myText),
             onTap: () => _selectCategory(context),
           ),
           ListTile(
-            title: Text('Tópico IX', style: myText),
+            title: const Text('Tópico IX', style: myText),
             onTap: () => _selectCategory(context),
           ),
           ListTile(
-            title: Text('Tópico X', style: myText),
+            title: const Text('Tópico X', style: myText),
             onTap: () => _selectCategory(context),
           ),
           ListTile(
-            title: Text('Tópico XI', style: myText),
+            title: const Text('Tópico XI', style: myText),
             onTap: () => _selectCategory(context),
           ),
           ListTile(
-            title: Text('Tópico XII', style: myText),
+            title: const Text('Tópico XII', style: myText),
             onTap: () => _selectCategory(context),
           ),
           ListTile(
-            title: Text('Tópico XIII', style: myText),
+            title: const Text('Tópico XIII', style: myText),
             onTap: () => _selectCategory(context),
           ),
           ListTile(

@@ -14,8 +14,8 @@ class TransactionList extends StatelessWidget {
     return transactions.isEmpty
         ? LayoutBuilder(
             builder: (ctx, constraints) {
-              return Column(
-                children: const [
+              return const Column(
+                children: [
                   SizedBox(height: 50),
                   Text(
                     'Nenhuma Despesa Cadastrada!',

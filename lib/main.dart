@@ -3,20 +3,21 @@ import 'package:aplicativo/core/utils/AppRoutes.dart';
 import 'package:aplicativo/modules/pages/hidden_drawer.dart';
 import 'package:aplicativo/modules/pages/splash_page.dart';
 import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart' show kIsWeb, kReleaseMode;
 import 'package:flutter/material.dart';
 
-void main() async {
+void main() {
   runApp(
     DevicePreview(
-      enabled: true,
-      builder: ((context) => ExpensesApp()),
+      // Disable DevicePreview on web and in release builds
+      enabled: !kIsWeb && !kReleaseMode,
+      builder: (context) => const ExpensesApp(),
     ),
   );
 }
 
 class ExpensesApp extends StatelessWidget {
-  ExpensesApp({Key? key}) : super(key: key);
-  final ThemeData tema = ThemeData();
+  const ExpensesApp({super.key});
 
   @override
   Widget build(BuildContext context) {

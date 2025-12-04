@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class AppTheme {
-  ThemeData tema = ThemeData();
+  final ThemeData _base = ThemeData();
 
-  ThemeData get getTheme => tema.copyWith(
-        colorScheme: tema.colorScheme.copyWith(
+  ThemeData get getTheme => _base.copyWith(
+        colorScheme: _base.colorScheme.copyWith(
           primary: const Color.fromRGBO(42, 147, 110, 1),
         ),
-        textTheme: tema.textTheme.copyWith(
+        textTheme: _base.textTheme.copyWith(
           titleLarge: const TextStyle(
             fontFamily: 'Poppins',
             fontSize: 18,

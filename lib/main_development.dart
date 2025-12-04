@@ -15,7 +15,7 @@ void main() async {
 }
 
 class ExpensesApp extends StatelessWidget {
-  ExpensesApp({Key? key}) : super(key: key);
+  ExpensesApp({super.key});
   final ThemeData tema = ThemeData();
 
   @override

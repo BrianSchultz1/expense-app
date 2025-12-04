@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:intl/intl.dart';
 
 class AdaptativeDatePicker extends StatelessWidget {
@@ -11,8 +12,8 @@ class AdaptativeDatePicker extends StatelessWidget {
   const AdaptativeDatePicker({
     this.selectedDate,
     this.onDateChanged,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   _showDatePicker(BuildContext context) {
     showDatePicker(
@@ -53,7 +54,7 @@ class AdaptativeDatePicker extends StatelessWidget {
                     selectedDate == null
                         ? 'Nenhuma data selecionada!'
                         : 'Data Selecionada: ${DateFormat('dd/MM/y').format(selectedDate!)}',
-                    style: TextStyle(color: Colors.white),
+                    style: const TextStyle(color: Colors.white),
                   ),
                 ),
                 Column(

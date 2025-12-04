@@ -19,10 +19,10 @@ class AuthPage extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: double.infinity,
             child: Column(
-              children: const [],
+              children: [],
             ),
           ),
         ],

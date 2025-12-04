@@ -1,6 +1,6 @@
-import 'dart:io';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
+import 'package:flutter/foundation.dart'
+    show kIsWeb, defaultTargetPlatform, TargetPlatform;
 import 'package:flutter/material.dart';
 
 class AdaptativeButton extends StatelessWidget {
@@ -10,12 +10,12 @@ class AdaptativeButton extends StatelessWidget {
   const AdaptativeButton(
     this.label,
     this.onPressed, {
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
-    final isIOS = !kIsWeb && Platform.isIOS;
+    final isIOS = !kIsWeb && defaultTargetPlatform == TargetPlatform.iOS;
 
     return isIOS
         ? CupertinoButton(

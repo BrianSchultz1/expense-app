@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:intl/intl.dart';
 import 'package:http/http.dart' as http;
 import 'adaptative_text_fild.dart';
@@ -129,7 +130,7 @@ class _TransactionFormState extends State<TransactionForm> {
           child: Column(
             children: [
               Card(
-                color: Color.fromRGBO(6, 100, 67, 1),
+                color: const Color.fromRGBO(6, 100, 67, 1),
                 elevation: 0,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
@@ -146,7 +147,7 @@ class _TransactionFormState extends State<TransactionForm> {
               ),
               const SizedBox(height: 10),
               Card(
-                color: Color.fromRGBO(6, 100, 67, 1),
+                color: const Color.fromRGBO(6, 100, 67, 1),
                 elevation: 0,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
